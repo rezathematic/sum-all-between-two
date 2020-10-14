@@ -1,14 +1,14 @@
-// defining the function - take an input, convert it to string and return the reversed string
-var numArray = [4,1];
-function sumAll(arr) {
-    var sum = 0;
-    for (var i = Math.min(...arr); i <= Math.max(...arr); i++) {
-      sum += i;
-    }
-    return sum;
-  }
+// Intermediate Algorithm Scripting: Seek and Destroy
+function destroyer(arr) {
+   var a = Array.prototype.slice.call(arguments, 1);
+   return arr
+     .filter(x => a.indexOf(x) == -1)
+   ;
+ }
+ 
+var a = destroyer([1, 2, 3, 1, 2, 3], 2, 3);
 
-console.log(sumAll(numArray));
+console.log(a);
 
 // add the value of the reversedString function to <p> tag
 function returnReverse() {
